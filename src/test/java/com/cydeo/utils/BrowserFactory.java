@@ -24,4 +24,8 @@ public class BrowserFactory {
 
   return browser;
     }
+
+    public static void main(String[] args) {
+
+    }
 }

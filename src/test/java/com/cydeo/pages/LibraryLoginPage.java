@@ -11,10 +11,12 @@ public class LibraryLoginPage {
 
 
 
-    private final Locator emailInput;
-    private final Locator passwordInput;
-    private final Locator signInButton;
-    private final Locator errorMessage;
+
+
+    public final Locator emailInput;
+    public final Locator passwordInput;
+    public final Locator signInButton;
+    public final Locator errorMessage;
 
     public LibraryLoginPage() {
         this.emailInput = Driver.getPage().locator("#inputEmail");

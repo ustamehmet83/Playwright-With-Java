@@ -11,13 +11,17 @@ import org.junit.jupiter.api.Test;
 public class P01_POMPractice {
 
   ///  LibraryLoginPage libraryLoginPage=new LibraryLoginPage();
-    LibraryLoginPage libraryLoginPage;
+    private final LibraryLoginPage libraryLoginPage;
+
+    public P01_POMPractice(LibraryLoginPage libraryLoginPage) {
+        this.libraryLoginPage = libraryLoginPage;
+    }
 
 
     @BeforeEach
     void setUp() {
         Driver.getPage().navigate("https://library1.cydeo.com");
-        libraryLoginPage =new LibraryLoginPage();
+
     }
 
     @AfterEach
@@ -30,9 +34,9 @@ public class P01_POMPractice {
     @Test
     void test1() {
 
-        libraryLoginPage.getEmailInput().fill("invalid");
-        libraryLoginPage.getPasswordInput().fill("invalid");
-        libraryLoginPage.getSignInButton().click();
+        libraryLoginPage.emailInput.fill("invalid");
+        libraryLoginPage.passwordInput.fill("invalid");
+        libraryLoginPage.signInButton.click();
     }
 
     @Test
